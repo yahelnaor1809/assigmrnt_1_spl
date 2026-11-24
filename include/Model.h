@@ -14,7 +14,11 @@ public:
     std::vector<std::string> tokenizer(std::string text) const;
     Model(const std::string& id, std::size_t embeddingSize);
     void generateTokenEmbedding(const std::vector<std::string>&, GPU&, size_t, size_t) const;
-private:
+    
+    const std::string& getId() const;
+    std::size_t getEmbeddingSize() const;
+    
+    private:
     std::string modelId;
     std::size_t embeddingSize;
 
